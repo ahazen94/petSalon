@@ -31,17 +31,24 @@ let petSalon={
     ]
 }
 function displayPetCount(){
-    //hint: length
+    document.getElementById("count").innerHTML=`<p>${petSalon.pets.length}</p>`;
 }
+displayPetCount();
 function displayNames(){
-    // use a for loop to travel the array
-    document.getElementById("petList").innerHTML=`
-    <li>${petSalon.pets[0].name}</li>
-    <li>${petSalon.pets[1].name}</li>`;
+    for(var i=0;i<petSalon.pets.length;i++){
+        document.getElementById("petList").innerHTML+=`
+        <li>${petSalon.pets[i].name}</li>`;
+    }
 }
-
 displayNames();
 
 function calculateAverage(){
-    
+    let total=0;
+    for(var i=0;i<petSalon.pets.length;i++){
+        total = total + petSalon.pets[i].age;
+        average = total/petSalon.pets.length;
+    }
+    document.getElementById("average").innerHTML+=`
+    <p>${average}</p>`;
 }
+calculateAverage();
