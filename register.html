@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Bark & Brush</title>
 </head>
 <body>
+    <header>
+        <div class="container flex-container margin-b30">
+            <h1>Bark & Brush</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2 class="secondary-text centered-text">Register a new pet</h2>
+        <div>
+            <div class="input-control">
+                <label>Name:*</label>
+                <input type="text" id="txtName">
+            </div>
+            <div class="input-control">
+                <label>Age:</label>
+                <input type="number" id="txtAge">
+            </div>
+            <div class="input-control">
+                <label>Gender:</label>
+                <input type="text" id="txtGender">
+            </div>
+            <div class="input-control">
+                <label>Service:*</label>
+                <select id="txtService">
+                    <option value="" selected disabled>-- Select an option --</option>
+                    <option value="Grooming">🧼 Grooming</option>
+                    <option value="Vaccines">💉 Vaccines</option>
+                    <option value="Boarding">🏨 Boarding</option>
+                </select>
+            </div>
+            <div class="input-control">
+                <label>Breed:*</label>
+                <select id="txtBreed">
+                    <option value="" selected disabled>-- Select an option --</option>
+                    <option value="Dog">🐕 Dog</option>
+                    <option value="Cat">🐈 Cat</option>
+                    <option value="Other">🐦 Other</option>
+                </select>
+            </div>
+            <div class="btn-container">
+                <button class="btn" onclick="register();">Register</button>
+            </div>
+        </div>
+    </main>
     
+    <div id="petList"></div>
+    <div class="petsInfo container">
+        <h4 class="light-text">Pets Information</h4>
+        <label>Total: <span id="totalPets"></span></label>
+
+        <div>
+            <label>🧼 Grooming: <span id="totalGrooming">0</span></label>
+            <label>💉 Vaccines: <span id="totalVaccines">0</span></label>
+            <label>🏨 Boarding: <span id="totalBoarding">0</span></label>
+        </div>
+    </div>
+    <div class="container" id="pets"></div>
+
+    <table>
+        <thead>
+            <!-- all the headers-->
+        </thead>
+        <tbody id="petTable">
+            <!--inject the rows-->
+        </tbody>
+    </table>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/display.js"></script>
 </body>
 </html>
