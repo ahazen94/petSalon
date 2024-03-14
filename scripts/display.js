@@ -1,6 +1,7 @@
 let text;
 let list;
 let card;
+let row;
 
 function displayNames(){
     list = document.getElementById("petList");
@@ -30,6 +31,21 @@ function displayCards(){
 }
 
 function displayRows(){
+    const TABLE = document.getElementById("petTable");
+    row="";
+    for(let i=0;i<petSalon.pets.length;i++){
+        let pet= petSalon.pets[i];
+        row+=`
+        <tr>
+            <td>${pet.name}</td>
+            <td>${pet.age}</td>
+            <td>${pet.gender}</td>
+            <td>${pet.service}</td>
+            <td>${pet.breed}</td>
+        </tr>
+        `;
+        TABLE.innerHTML=row;
+    }
 
 }
 
