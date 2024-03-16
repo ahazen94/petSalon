@@ -41,8 +41,7 @@ function register(){
         //push the object to the array
         petSalon.pets.push(newPet);
         //display the array
-        //displayCards();
-        displayRows();
+        displayCards();
         clearForm();
         displayTotalAmountPets();
         displayServiceCount();
@@ -74,8 +73,7 @@ function init(){
     //hook events
 
     //initial functions
-    //displayCards();
-    displayRows();
+    displayCards();
     displayTotalAmountPets();
     displayServiceCount();
 

@@ -19,11 +19,11 @@ function displayCards(){
         let pet = petSalon.pets[i];
         card+=`
         <div class="petCard ${pet.service.toLowerCase()}">
-            <p>${pet.name}</p>
-            <p>${pet.age}</p>
-            <p>${pet.gender}</p>
-            <p>${pet.service}</p>
-            <p>${pet.breed}</p>
+            <p>Name: ${pet.name}</p>
+            <p>Age: ${pet.age}</p>
+            <p>Gender: ${pet.gender}</p>
+            <p>Service: ${pet.service}</p>
+            <p>Type: ${pet.breed}</p>
         </div>
         `;
     }

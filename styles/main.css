@@ -8,9 +8,14 @@ body{
 }
 img{
     max-width: 100%;
+    image-rendering: auto;
 }
 a{
     text-decoration: none;
+}
+::-webkit-scrollbar{
+    display: none;
+    -ms-overflow-style: none;
 }
 /*utilities*/
 .container{
@@ -117,16 +122,49 @@ nav a{
 }
 /*more about us section*/
 .more-about-us{
-    display: block;
-    background-color: #dedede;
     width: 100%;
+    margin-bottom: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .grid-container{
     display: flex;
-    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+/*testimonials*/
+.testimonials{
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 0;
+}
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+.testimonial-img{
+    width: 30%;
     height: 25%;
 }
-
+/*footer*/
+.site-footer{
+    background-color:  rgb(14, 231, 159);
+    padding: center;
+    height: 100px;
+}
+nav a{
+    color: black;
+    font-weight: 300;
+    font-size: 24px;
+    margin-right: 20px;
+}
 /*register page*/
 .input-control{
     margin-bottom: 20px;
